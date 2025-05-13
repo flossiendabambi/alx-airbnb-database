@@ -3,5 +3,5 @@ FROM Property
 WHERE property_id IN (
   SELECT property_id
   FROM Review
-  WHERE rating > 4.0
+  WHERE AVG(rating) > 4.0
   );
